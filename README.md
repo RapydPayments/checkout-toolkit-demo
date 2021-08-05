@@ -1,7 +1,7 @@
 # Rapyd Checkout Toolkit Demo
 Rapyd checkout toolkit integration demo
 
-This repository contains a simple example that shows the implementation of Rapyd's checkout tool into an eCommerce website.
+This repository contains a simple example that shows the implementation of Rapyd's checkout toolkit into an eCommerce website.
 
 To use this example:
 
