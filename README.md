@@ -1,5 +1,5 @@
 # Rapyd Checkout Toolkit Demo
- Rapyd checkout toolkit integration demo
+Rapyd checkout toolkit integration demo
 
 This repository contains a simple example that shows the implementation of Rapyd's checkout tool into an eCommerce website.
 
@@ -10,6 +10,7 @@ To use this example:
 3. Copy the checkout page id from the API response (for example, "checkout_123456789123456789123456789")
 4. Open the checkout.html file and find the code below. Paste the checkout id in the "id" field:
 
+```javascript
     let checkout = new RapydCheckoutToolkit({
         pay_button_text: "Pay Now",
         pay_button_color: "#4BB4D2",
@@ -22,9 +23,8 @@ To use this example:
             }
         }
     });
-
+```
 
 ~  
 Isaac Benitez
-Sales Engineer
-Rapyd
+@Rapyd
