@@ -26,5 +26,5 @@ let checkout = new RapydCheckoutToolkit({
 ```
 
 ~  
-Isaac Benitez 
+Isaac Benitez  
 @Rapyd
