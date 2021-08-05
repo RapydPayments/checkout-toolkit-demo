@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+
+    <title>Rapyd Checkout Toolkit</title>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="bike.html">
+                    <img src="img/logo.svg" alt="" height="42">
+                </a>
+                <a class="navbar-brand" href="bike.html">Bikes.com</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="bike.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+
+            <!-- Feedback -->
+            <div class="row justify-content-center">
+                <div class="col text-center my-4" style="display: none" id="feedback">
+                    <img src="" id="image" alt="" height="120" class="mt-2">
+                    <h3 id="title" class="my-4"></h3>
+                    <p id="message"></p>
+                    <a role="button" class="btn btn-custom mt-2" href="" id="action"></a>
+                </div>
+            </div>
+
+            <!-- iframe -->
+            <div class="row justify-content-center">
+                <div class="col" style="max-width: 500px;" id="rapyd-checkout"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-center text-center border-top py-2">
+                <span>&copy;2021. Rapyd Checkout Toolkit Integration demo site.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- code to display the iframe -->
+    <script src="https://sandboxcheckouttoolkit.rapyd.net"></script>
+    <script>
+        window.onload = function () {
+            let checkout = new RapydCheckoutToolkit({
+                pay_button_text: "Pay Now",
+                pay_button_color: "#4BB4D2",
+                id: "checkout_", // your checkout page id goes here
+                style: {
+                    submit: {
+                        base: {
+                            color: "white"
+                        }
+                    }
+                }
+            });
+            checkout.displayCheckout();
+        }
+        window.addEventListener('onCheckoutPaymentSuccess', function (event) {
+            console.log(event.detail);
+            feedback(event);
+        });
+        window.addEventListener('onCheckoutFailure', function (event) {
+            console.log(event.detail.error);
+            feedback(event);
+        });
+        window.addEventListener('onCheckoutPaymentFailure', (event)=> {
+            console.log(event.detail.error);
+            feedback(event);
+        })
+
+
+        // display information to the user
+        function feedback(event){
+            if (event.detail.error){
+                document.getElementById('title').textContent = "Whoops!";
+                document.getElementById('message').innerHTML = "We cannot process your payment:<br/>" + 
+                    event.detail.error;
+                document.getElementById('image').src = "img/no-bike.svg";
+                document.getElementById('action').textContent = "Try again";
+            }
+            else {
+                document.getElementById('title').textContent = "Success!";
+                document.getElementById('message').innerHTML = "Thank you! Your product is on its way!" + 
+                    "<br>" +
+                    "Order: " + event.detail.metadata.sales_order;
+                document.getElementById('image').src = "img/logo.svg";
+                document.getElementById('action').textContent = "Home";
+            }
+
+            document.getElementById('action').href = "bike.html";
+            document.getElementById('feedback').style.display = "block";
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
