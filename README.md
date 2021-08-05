@@ -11,18 +11,18 @@ To use this example:
 4. Open the checkout.html file and find the code below. Paste the checkout id in the "id" field:
 
 ```javascript
-    let checkout = new RapydCheckoutToolkit({
-        pay_button_text: "Pay Now",
-        pay_button_color: "#4BB4D2",
-        id: "checkout_", // your checkout page id goes here
-        style: {
-            submit: {
-                base: {
-                    color: "white"
-                }
+let checkout = new RapydCheckoutToolkit({
+    pay_button_text: "Pay Now",
+    pay_button_color: "#4BB4D2",
+    id: "checkout_", // your checkout page id goes here
+    style: {
+        submit: {
+            base: {
+                color: "white"
             }
         }
-    });
+    }
+});
 ```
 
 ~  
