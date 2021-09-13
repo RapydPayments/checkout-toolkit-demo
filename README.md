@@ -1,7 +1,10 @@
 # Rapyd Checkout Toolkit Demo
-Rapyd checkout toolkit integration demo
 
-This repository contains a simple example that shows the implementation of Rapyd's checkout toolkit into an eCommerce website.
+Quickly integrate Rapyd Checkout Toolkit into your online shopping cart
+
+This repository contains a simple example demonstrating how to add Rapyd's Checkout Toolkit to an eCommerce website. Checkout Toolkit lets you embed an iframe directly into your shopping cart payment acceptance fields. This ensures your customers are never redirected away from your website during the checkout process.
+
+Visit Rapyd's documentation where you can see more code samples and watch a demo video: https://docs.rapyd.net/build-with-rapyd/docs/checkout-toolkit
 
 To use this example:
 
@@ -27,7 +30,3 @@ let checkout = new RapydCheckoutToolkit({
 Checkout toolkit integration documentation:
 
 https://docs.rapyd.net/build-with-rapyd/docs/checkout-toolkit
-
-~  
-Isaac Benitez  
-@Rapyd
