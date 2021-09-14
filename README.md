@@ -30,4 +30,4 @@ let checkout = new RapydCheckoutToolkit({
 * Checkout toolkit integration documentation:
 https://docs.rapyd.net/build-with-rapyd/docs/checkout-toolkit
 * Join the Rapyd Community:
-https://community.rapdyd.net 
+https://community.rapyd.net 
