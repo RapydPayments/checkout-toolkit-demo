@@ -5,7 +5,7 @@
 This repository contains a simple example demonstrating how to add Rapyd's Checkout Toolkit to an eCommerce website. Checkout Toolkit lets you embed an iframe directly into your shopping cart payment acceptance fields. This ensures your customers are never redirected away from your website during the checkout process.
 
 ## Demo Video
-[![thumbnail of video link for youtube video showing rapyd checkout toolkit video](https://files.readme.io/a4897c1-Youtube_Thumbnail_-_Rapyd_Bytles_-_Checkout_Toolkit2x.png =250x)](https://youtu.be/3a788d8NFCc)
+<a href="https://youtu.be/3a788d8NFCc"><img src="https://files.readme.io/a4897c1-Youtube_Thumbnail_-_Rapyd_Bytles_-_Checkout_Toolkit2x.png" alt="thumbnail of video link for youtube video showing rapyd checkout toolkit video" style="width:250"></a>
 
 Visit Rapyd's documentation where you can see more code samples and watch a demo video: https://docs.rapyd.net/build-with-rapyd/docs/checkout-toolkit
 
