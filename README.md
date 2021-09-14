@@ -11,7 +11,7 @@ Visit Rapyd's documentation where you can see more code samples and watch a demo
 
 ## To use this example:
 
-1. Clone this repository.
+1. Clone this repository
 2. Create a checkout page using the API: https://docs.rapyd.net/build-with-rapyd/reference/checkout-page-object#create-checkout-page
 3. Copy the checkout page id from the API response (for example, "checkout_123456789123456789123456789")
 4. Open the checkout.html file and find the code below. Paste the checkout id in the "id" field:
@@ -31,8 +31,8 @@ let checkout = new RapydCheckoutToolkit({
 });
 ```
 
-Checkout toolkit integration documentation:
+* Checkout toolkit integration documentation:
 https://docs.rapyd.net/build-with-rapyd/docs/checkout-toolkit
 
-Join the Rapyd Community:
+* Join the Rapyd Community:
 https://community.rapdyd.net 
