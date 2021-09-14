@@ -8,7 +8,7 @@ This repository contains a simple example demonstrating how to add Rapyd's Check
 
 Visit Rapyd's documentation where you can see more code samples and watch a demo video: https://docs.rapyd.net/build-with-rapyd/docs/checkout-toolkit
 
-To use this example:
+## To use this example:
 
 1. Clone this repository.
 2. Create a checkout page using the API: https://docs.rapyd.net/build-with-rapyd/reference/checkout-page-object#create-checkout-page
@@ -29,6 +29,7 @@ let checkout = new RapydCheckoutToolkit({
     }
 });
 ```
+
 Checkout toolkit integration documentation:
 
 https://docs.rapyd.net/build-with-rapyd/docs/checkout-toolkit
