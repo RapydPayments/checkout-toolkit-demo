@@ -27,7 +27,7 @@ let checkout = new RapydCheckoutToolkit({
 });
 ```
 ## Resources
-* Checkout toolkit integration documentation:
-https://docs.rapyd.net/build-with-rapyd/docs/checkout-toolkit
+* Make your first call with Rapyd API:
+https://docs.rapyd.net/build-with-rapyd/docs/make-your-first-api-call
 * Join the Rapyd Community:
 https://community.rapyd.net 
